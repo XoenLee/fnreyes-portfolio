@@ -419,12 +419,10 @@ div.client-nav-container ul a {
     }
 
     header nav {
-        flex-direction: column;
         align-items: center;
     }
 
     header ul {
-        flex-direction: column;
         text-align: center;
     }
 
@@ -438,6 +436,7 @@ div.client-nav-container ul a {
         transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;
+        overflow-x: hidden;
     }
 
     .heroSection h3 {
