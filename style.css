@@ -516,8 +516,7 @@ section {
 div.project-section-header {
     width: 100%;
     max-width: 1400px;
-    padding-top: 100px;
-    margin: 0px auto 0 auto;
+    margin: 0 auto 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -539,7 +538,7 @@ div.project-categ-1, div.project-categ-2, div.project-categ-3 {
 div.project-section-nav, div.project-section-nav-2, div.project-section-nav-3 {
     width: 100%;
     max-width: 1400px;
-    margin: 50px auto 0 auto;
+    margin: 30px auto 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -569,7 +568,7 @@ div.project-section-nav, div.project-section-nav-2, div.project-section-nav-3 {
 .section-about, .contact-container {
     width: 100%;
     max-width: 1400px;
-    margin: 30px auto 30px auto;
+    margin: 0 auto 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
