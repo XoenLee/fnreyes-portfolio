@@ -430,6 +430,11 @@ div.client-nav-container ul a {
         margin: 0.5rem 0;
     }
 
+    header ul a {
+        font-size: 0.73rem;
+        padding: 0 0.9rem;
+    }
+
     .heroSection {
         width: 80%; /* Adjust this value as needed for smaller devices */
         max-width: none; /* Remove the max-width for smaller devices if necessary */
@@ -453,37 +458,37 @@ div.client-nav-container ul a {
 
     .blurredCrystals {
         position: absolute;
-        width: 500px;
+        width: 100%;
         transform: translate(-50%, -50%);
-        top: calc(50%);
-        left: calc(50%);
+        top: 50%;
+        left: 50%;
     }
     
     .darkCrystals {
         position: absolute;
-        width: 800px;
+        width: 100%;
         transform: translate(-50%, -50%);
-        top: calc(50%);
-        left: calc(50%);
+        top: 50%;
+        left: 50%;
         z-index: 995;
     }
     
     .lightCrystals{
         position: absolute;
-        width: 700px;
+        width: 100%;
         transform: translate(-50%, -50%);
-        top: calc(70%);
-        left: calc(50%);
+        top: 70%;
+        left: 50%;
         z-index: 997;
         opacity: 0.5;
     }
     
     .lineCrystals{
         position: absolute;
-        width: 700px;
+        width: 100%;
         transform: translate(-50%, -50%);
-        top: calc(80%);
-        left: calc(50%);
+        top: 80%;
+        left: 50%;
         z-index: 998;
         opacity: 0.2;
     }
