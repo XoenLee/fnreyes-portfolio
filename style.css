@@ -417,7 +417,12 @@ div.client-nav-container ul a {
         height: 60vh;
         width: 100vw;
     }
-
+    .heroSection i {
+        font-size: 1rem;
+    }
+    div.icon-links a {
+        font-size: 1rem;
+    }
     header nav {
         align-items: center;
     }
@@ -742,6 +747,7 @@ img.client-logo{
         left: unset;
         right: 10px;
         color: #fff;
+        font-size: 0.73rem;
         letter-spacing: 2px;
         margin-bottom: 0;
         writing-mode: lr;
