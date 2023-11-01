@@ -693,10 +693,12 @@ img.image-original {
 .overlay-text {
     position: absolute;
     bottom: 10px; /* Adjust the positioning as needed */
-    left: 10px; /* Adjust the positioning as needed */
+    left: 90%; /* Adjust the positioning as needed */
     color: #FFF;
-    writing-mode: sideways-lr;
+    transform: rotate(270deg); /* Rotate the text vertically */
+    transform-origin: left bottom; /* Set the rotation origin */
     letter-spacing: 2px;
+    white-space: nowrap; /* Prevent line breaks */
     margin-bottom: 50px;
 }
 
@@ -749,7 +751,7 @@ img.client-logo{
         font-size: 0.73rem;
         letter-spacing: 2px;
         margin-bottom: 0;
-        writing-mode: lr;
+        transform: none;
     }
 
     .cards-column {
