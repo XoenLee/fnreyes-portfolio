@@ -274,9 +274,10 @@ main {
 
 .cards-container-2 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin: 25px 50px 50px 50px;
 }
 
 .cards-column-set-1 {
@@ -289,7 +290,6 @@ main {
 .cards-column-set-2 {
     display: flex;
     flex-direction: column;
-    width: 100%;
     gap: 20px;
 
 }
@@ -306,7 +306,8 @@ main {
 .cards-row-1, .cards-row-2 {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
