@@ -690,7 +690,7 @@ img.image-original {
     visibility: hidden;
 }
 
-.oblong .image-overlay .overlay-text {
+.overlay-text {
     position: absolute;
     bottom: 10px; /* Adjust the positioning as needed */
     left: 10px; /* Adjust the positioning as needed */
