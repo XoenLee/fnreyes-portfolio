@@ -254,14 +254,31 @@ main {
     text-transform: uppercase;
     color: #F08F13;
 }
+
+#about h2.section-header, #portfolio h2.section-header, #contact h2.section-header {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
 .details-container {
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .details-container p{
     max-width: 40%;
+}
+
+.details-icon-links {
+    font-size: 1.8rem;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.details-icon-links i {
+    color: rgb(55, 245, 245);
 }
 
 .cards-container {
@@ -648,6 +665,7 @@ h3.section-header{
     /* background-color: rgba(0, 20, 31, 0.1); */
     background-color: rgba(255, 255, 255, 0.2);
     height: 640px;
+    
 }
 
 img.image-original {
