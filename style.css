@@ -349,7 +349,7 @@ main {
 }
 
 div.client-nav-container {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px;
@@ -612,11 +612,10 @@ div.project-section-nav, div.project-section-nav-2, div.project-section-nav-3 {
 h2.section-header{
     font-size: 2em;
 }
-
-.details-container{
-    margin-bottom: 30px;
+div.project-categ {
+    max-width: 1440px;
+    min-width: 250px;
 }
-
 div.project-categ p{
     color: #F08F13;
     border: 1px solid #F08F13;
@@ -625,6 +624,7 @@ div.project-categ p{
     margin-bottom: 30px;
     text-transform: uppercase;
     text-align: center;
+    
 }
 
 div.section-container {
