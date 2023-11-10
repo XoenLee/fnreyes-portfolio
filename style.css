@@ -270,6 +270,19 @@ main {
     max-width: 40%;
 }
 
+div.section-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+div.section-container p{
+    max-width: 50%;
+}
+
 .details-icon-links {
     font-size: 1.8rem;
     display: flex;
@@ -515,6 +528,10 @@ div.client-nav-container ul a {
         z-index: 998;
         opacity: 0.2;
     }
+
+    div.details-container p, div.section-container p{
+        max-width: 80%;
+    }
     
 }
 
@@ -627,18 +644,6 @@ div.project-categ p{
     
 }
 
-div.section-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-}
-
-div.section-container p {
-    margin-bottom: 20px;
-}
-
 h3.section-header{
     margin-bottom: 20px;
 }
@@ -735,6 +740,35 @@ img.client-logo{
     width: 100%;
 }
 
+div.link-to-portfolio {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 25px;
+}
+div.link-to-portfolio a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: larger;
+}
+
+div.link-to-portfolio a:hover {
+    color: #F08F13;
+}
+
+div.card:active {
+    background-color: #f1ba71; /* Change this to your desired clicked background color */
+}
+
+div.card a{
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+div.card:hover, div.card a:hover, div.card:hover i, div.card:hover h2 {
+    background-color: #f0f0f0;
+    color: #F08F13;
+}
 /* sliders-end */
 
 /* sliders-responsiveness-start */
@@ -781,6 +815,11 @@ img.client-logo{
         width: 100%;
         max-width: none;
         margin-bottom: 20px;
+    }
+
+    div.link-to-portfolio {
+        justify-content: center;
+        font-size: small;
     }
 
 }

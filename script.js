@@ -106,3 +106,7 @@ window.addEventListener("mousemove", (e) => {
         el.style.transform = `translateX(calc(-50% - ${xValue * speedx}px)) translateY(calc(-50% - ${yValue * speedy}px))`;
     })
 })
+
+function sendEmail(emailAddress) {
+    window.location.href = 'mailto:' + emailAddress;
+}
