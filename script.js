@@ -110,3 +110,19 @@ window.addEventListener("mousemove", (e) => {
 function sendEmail(emailAddress) {
     window.location.href = 'mailto:' + emailAddress;
 }
+
+// function smoothScroll(target) {
+//     var targetAnchor = document.querySelector(target);
+//     if (targetAnchor) {
+
+//       // Get the offset of the target anchor element.
+//         var targetOffset = targetAnchor.getBoundingClientRect().top;
+
+//       // Scroll to the target anchor element smoothly.
+//         window.scrollTo({
+//         top: targetOffset,
+//         behavior: 'smooth',
+//         duration: 8000
+//         });
+//     }
+// }

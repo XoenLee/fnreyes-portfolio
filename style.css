@@ -15,6 +15,7 @@ body {
     padding: 0;
     height: 100vh;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 hr {
     width: 20%;
@@ -445,7 +446,7 @@ div.client-nav-container ul a {
 
 @media (max-width: 768px) {
     main {
-        height: 60vh;
+        height: 80vh;
         width: 100vw;
     }
     .heroSection i {
@@ -477,7 +478,6 @@ div.client-nav-container ul a {
         transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;
-        overflow-x: hidden;
     }
 
     .heroSection h3 {
