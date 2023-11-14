@@ -769,6 +769,38 @@ div.card:hover, div.card a:hover, div.card:hover i, div.card:hover h2 {
     background-color: #f0f0f0;
     color: #F08F13;
 }
+
+div.card-fb:hover, div.card-fb a:hover, div.card-fb:hover i, div.card-fb:hover h2 {
+    background-color: #f0f0f0;
+    color: #1877F2;
+}
+
+
+div.card-linkedin:hover, div.card-linkedin a:hover, div.card-linkedin:hover i, div.card-linkedin:hover h2 {
+    background-color: #f0f0f0;
+    color: #2867B2;
+}
+
+div.card-behance:hover, div.card-behance a:hover, div.card-behance:hover i, div.card-behance:hover h2 {
+    background-color: #f0f0f0;
+    color: #0057FF;
+}
+
+div.card-insta:hover,
+div.card-insta a:hover,
+div.card-insta:hover i,
+div.card-insta:hover h2 {
+    background-color: #f0f0f0;
+    color: #E1306C;
+}
+
+div.card-github:hover,
+div.card-github a:hover,
+div.card-github:hover i,
+div.card-github:hover h2 {
+    background-color: #f0f0f0;
+    color: #171515;
+}
 /* sliders-end */
 
 /* sliders-responsiveness-start */
