@@ -87,6 +87,10 @@ function createNavGalleries(projectCategories) {
             button.classList.add(activeClass);
         });
         });
+
+        // Set the first button as active by default.
+        navButtons[0].classList.add(activeClass);
+        sections[0].classList.add("section-visible");
     });
 }
 
