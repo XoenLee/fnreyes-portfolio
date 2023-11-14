@@ -46,16 +46,16 @@ const projectCategories = [
         sectionSelector: "#section-gallery-1, #section-gallery-2, #section-gallery-3",
         activeClass: "active",
     },
-    {
-        navButtonsSelector: ".project-categ-2 .client-nav-container a",
-        sectionSelector: "#section-gallery-4, #section-gallery-5, #section-gallery-6",
-        activeClass: "active",
-    },
-    {
-        navButtonsSelector: ".project-categ-3 .client-nav-container a",
-        sectionSelector: "#section-gallery-7, #section-gallery-8, #section-gallery-9",
-        activeClass: "active",
-    },
+    // {
+    //     navButtonsSelector: ".project-categ-2 .client-nav-container a",
+    //     sectionSelector: "#section-gallery-4, #section-gallery-5, #section-gallery-6",
+    //     activeClass: "active",
+    // },
+    // {
+    //     navButtonsSelector: ".project-categ-3 .client-nav-container a",
+    //     sectionSelector: "#section-gallery-7, #section-gallery-8, #section-gallery-9",
+    //     activeClass: "active",
+    // },
 ];
 
 createNavGalleries(projectCategories);
@@ -69,23 +69,29 @@ function createNavGalleries(projectCategories) {
         const navButtons = document.querySelectorAll(navButtonsSelector);
         const sections = document.querySelectorAll(sectionSelector);
 
+        // Check if there are any navButtons before proceeding
+        if (navButtons.length === 0) {
+            console.error("No navigation buttons found for selector:", navButtonsSelector);
+            return;
+        }
+
         navButtons.forEach((button, index) => {
-        button.addEventListener("click", () => {
-            // Hide all of the sections.
-            sections.forEach((section) => {
-            section.classList.remove("section-visible");
+            button.addEventListener("click", () => {
+                // Hide all of the sections.
+                sections.forEach((section) => {
+                    section.classList.remove("section-visible");
+                });
+
+                // Show the active section.
+                sections[index].classList.add("section-visible");
+
+                // Add the active class to the active button.
+                navButtons.forEach((otherButton) => {
+                    otherButton.classList.remove(activeClass);
+                });
+
+                button.classList.add(activeClass);
             });
-
-            // Show the active section.
-            sections[index].classList.add("section-visible");
-
-            // Add the active class to the active button.
-            navButtons.forEach((otherButton) => {
-            otherButton.classList.remove(activeClass);
-            });
-
-            button.classList.add(activeClass);
-        });
         });
 
         // Set the first button as active by default.
@@ -93,6 +99,7 @@ function createNavGalleries(projectCategories) {
         sections[0].classList.add("section-visible");
     });
 }
+
 
 // parallax
 
