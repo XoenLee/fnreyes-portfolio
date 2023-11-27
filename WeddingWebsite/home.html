@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Frederick & Marlie's Wedding</title>
+</head>
+
+<body>
+    <!-- 1. Home Page -->
+    <section id="home">
+        <header>
+            <h1>Welcome to Frederick & Marlie's Wedding</h1>
+            <p class="subtitle">Save the Date: July 15, 2023</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#event">Event Details</a></li>
+                    <li><a href="#rsvp">RSVP</a></li>
+                    <!-- Add other navigation links -->
+                </ul>
+            </nav>
+        </header>
+        <div class="countdown">
+            <p>Countdown Timer: 30 days</p>
+        </div>
+    </section>
+
+    <!-- 3. About Us -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Our love story...</p>
+        <p>How we got engaged...</p>
+    </section>
+
+    <!-- 4. Event Details -->
+    <section id="event">
+        <h2>Event Details</h2>
+        <p>Ceremony and reception venue details...</p>
+        <p>Schedule or timeline of events...</p>
+    </section>
+
+    <!-- 5. RSVP -->
+    <section id="rsvp">
+        <h2>RSVP</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="rsvpStatus">RSVP Status:</label>
+            <select id="rsvpStatus" name="rsvpStatus" required>
+                <option value="attending">Attending</option>
+                <option value="notAttending">Not Attending</option>
+            </select>
+
+            <label for="dietaryRestrictions">Dietary Restrictions:</label>
+            <input type="text" id="dietaryRestrictions" name="dietaryRestrictions">
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Add other sections -->
+
+    <footer>
+        <p>&copy; 2023 John & Jane</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
