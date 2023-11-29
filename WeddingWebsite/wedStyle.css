@@ -294,14 +294,24 @@ div.carousel-container > ul {
 
 .flowerBed-element {
     position: relative;
+    width: 100%;
 }
 
 .flowerBed-element img {
     position: absolute;
-    top: -100px;
-    width: 1920px;
+    bottom: 0;
+    width: 100%; /* Maintain original width */
+    height: 100px;
+    object-fit: cover;
     z-index: 999;
 }
+
+/* Media query for screens narrower than 1921px */
+@media screen and (max-width: 1920px) {
+    .flowerBed-element {
+      width: 100%; /* Stretch the container to 100% viewport width */
+    }
+  }
 
 .logo-middle {
     display: flex;
@@ -540,7 +550,7 @@ div.container {
         font-size: .75rem;
         padding: 5px 10px;
     }
-
+    
     .carousel-button {
         font-size: 1rem;
     }
@@ -550,13 +560,13 @@ div.container {
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 75%;
+        width: 100%;
         margin: auto;
     }
     
     .logo-middle img {
         margin-top: 30px;
-        width: 500px;
+        width: 100%;
     }
 }
 
