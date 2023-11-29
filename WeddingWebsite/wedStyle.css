@@ -534,18 +534,21 @@ div.container {
     #heroSection-2{
         display: flex;
         background-position: center;
+        background-size: 800px auto;
         height: 420px;
     }
 
     #heroSection {
-        background-position: 30% 45%;
+        background-position: 30% 70%;
+        background-size: 750px auto;
         display: flex;
         height: 420px;
     }
 
     #heroSection-3 {
         display: flex;
-        background-position: 60% 50%;
+        background-size: 750px auto;
+        background-position: 60% 90%;
         height: 420px;
     }
 
