@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const navbarLinks = document.getElementById('navbar-links');
 
     toggleButton.addEventListener('click', function () {
-        navbarLinks.style.display = navbarLinks.style.display === 'none' || navbarLinks.style.display === '' ? 'flex' : 'none';
+        navbarLinks.style.display = navbarLinks.style.display === 'none' ? 'flex' : 'none';
     });
 });
 

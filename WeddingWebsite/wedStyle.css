@@ -520,12 +520,24 @@ div.container {
     .navbar-links {
         display: none;
         flex-direction: column;
-        text-align: right;
         width: 100%;
         position: absolute;
         top: 60px;
         left: 0;
         background-color: #1c2263;
+        z-index: 9999;
+    }
+
+    .navbar-links a:first-of-type, .navbar-links :nth-of-type(2){
+        margin-right: 0;
+    }
+    
+    div.logoName {
+        display: none;
+    }
+
+    .navbar-links a:nth-of-type(3), .navbar-links a:nth-of-type(4){
+        margin-left: 0;
     }
 
     .navbar-links a {
@@ -547,6 +559,7 @@ div.container {
 
     .navbar-toggle, .logoResp {
         display: flex;
+        z-index: 99999;
     }
 
     #heroSection-2{
