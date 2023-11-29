@@ -43,15 +43,15 @@
 @media only screen and (max-width: 768px) {
 
     p {
-        font-size: 0.875rem;
-    }
-    
-    h3 {
         font-size: 1rem;
     }
     
-    h2 {
+    h3 {
         font-size: 1.125rem;
+    }
+    
+    h2 {
+        font-size: 1.25rem;
     }
     
     h1 {
@@ -59,7 +59,7 @@
     }
     
     a {
-        font-size: 0.875rem;
+        font-size: 1rem;
     }
 
     .navbar-links {
