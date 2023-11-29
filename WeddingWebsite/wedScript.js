@@ -60,27 +60,27 @@ const countDownDate = new Date("Feb 23, 2024 23:59:59").getTime();
 
 // Update the countdown every 1 second
 const x = setInterval(function() {
-  // Get the current date and time
-  const now = new Date().getTime();
+    // Get the current date and time
+    const now = new Date().getTime();
 
-  // Calculate the remaining time
-  const distance = countDownDate - now;
+    // Calculate the remaining time
+    const distance = countDownDate - now;
 
-  // Calculate days, hours, minutes, and seconds
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // Calculate days, hours, minutes, and seconds
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Update the HTML elements with the calculated values
-  document.querySelector('.clock-day').innerHTML = days;
-  document.querySelector('.clock-hours').innerHTML = hours;
-  document.querySelector('.clock-minutes').innerHTML = minutes;
-  document.querySelector('.clock-seconds').innerHTML = seconds;
+    // Update the HTML elements with the calculated values
+    document.querySelector('.clock-day').innerHTML = days;
+    document.querySelector('.clock-hours').innerHTML = hours;
+    document.querySelector('.clock-minutes').innerHTML = minutes;
+    document.querySelector('.clock-seconds').innerHTML = seconds;
 
-  // If the countdown is over, display a message
-  if (distance < 0) {
-    clearInterval(x);
-    document.querySelector('.clock-container').innerHTML = "EXPIRED";
-  }
+    // If the countdown is over, display a message
+    if (distance < 0) {
+        clearInterval(x);
+        document.querySelector('.clock-container').innerHTML = "EXPIRED";
+    }
 }, 1000);

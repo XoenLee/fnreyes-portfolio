@@ -547,8 +547,7 @@ div.container {
 
     #heroSection-3 {
         display: flex;
-        background-size: 750px auto;
-        background-position: 60% 90%;
+        background-position: 60% 100%;
         height: 420px;
     }
 
