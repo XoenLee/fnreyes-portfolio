@@ -531,11 +531,25 @@ div.container {
         display: flex;
     }
 
-    #heroSection, #heroSection-2, #heroSection-3 {
+    #heroSection-2{
         display: flex;
         background-position: center;
         height: 420px;
     }
+
+    #heroSection {
+        background-position: 30% 45%;
+        display: flex;
+        height: 420px;
+    }
+
+    #heroSection-3 {
+        display: flex;
+        background-position: 60% 50%;
+        height: 420px;
+    }
+
+    
     
     div.quote-header {
         font-size: 1rem;
