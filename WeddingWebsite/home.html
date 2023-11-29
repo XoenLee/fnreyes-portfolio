@@ -4,74 +4,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/WeddingWebsite/wedStyle.css">
     <title>Frederick & Marlie's Wedding</title>
 </head>
 
 <body>
     <!-- 1. Home Page -->
     <section id="home">
-        <header>
-            <h1>Welcome to Frederick & Marlie's Wedding</h1>
-            <p class="subtitle">Save the Date: July 15, 2023</p>
-            <nav>
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#event">Event Details</a></li>
-                    <li><a href="#rsvp">RSVP</a></li>
-                    <!-- Add other navigation links -->
-                </ul>
-            </nav>
-        </header>
-        <div class="countdown">
-            <p>Countdown Timer: 30 days</p>
+        <div class="header-container">
+            <header>
+                <nav class="navbar">
+                    <div class="navbar-container">
+                        <div class="navbar-links" id="navbar-links">
+                            <a href="#about">About Us</a>
+                            <a href="#event">Event Details</a>
+                            <div class="logoName">
+                                <img class="logo" src="/WeddingWebsite/photos/nameLogoForUp.png" alt="fnmLogo">
+                            </div>
+                            <a href="#map">Navigation</a>
+                            <a href="#rsvp">RSVP</a>
+                            <!-- Add other navigation links -->
+                        </div>
+                        <div class="hamburg">
+                            <div class="logoResp">
+                                <img class="logo" src="/WeddingWebsite/photos/nameLogoForUp.png" alt="fnmLogo">
+                            </div>
+                            <div class="navbar-toggle" id="navbar-toggle">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
         </div>
     </section>
 
+    <section id="carousel">
+        <div class="carousel-container" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev">
+                <i class="fa-solid fa-angles-left"></i>
+            </button>
+            <button class="carousel-button next" data-carousel-button="next">
+                <i class="fa-solid fa-angles-right"></i>
+            </button>
+
+            <ul class="data-slides" data-slides>
+                <li class="slide" id="heroSection" data-active>
+                    <div class="container">
+                        <div id="heroSection-content">
+                            <div class="quote-header">
+                                <h2>Embarking on the Novel of Forever</h2>
+                            </div>
+                            <div class="quotes">
+                                <p>Saying 'I do' isn't just a chapter; it's launching a novel of love, family, and forever.</p>
+                            </div>
+                            <div class="rsvp">
+                                <a href="#rsvp">Save My Seat</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="slide" id="heroSection-2">
+                    <div class="container">
+                        <div id="heroSection-content2">
+                            <div class="quote-header">
+                                <h2>Weaving the Tapestry of Everlasting Love</h2>
+                            </div>
+                            <div class="quotes">
+                                <p>Our wedding day marks the moment two hearts weave a story of joy, laughter, and a bond growing stronger every day.</p>
+                            </div>
+                            <div class="rsvp2">
+                                <a href="#rsvp">Save My Seat</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="slide" id="heroSection-3">
+                    <div class="container">
+                        <div id="heroSection-content3">
+                            <div class="quote-header">
+                                <h2>Painting the Canvas of Life Together</h2>
+                            </div>
+                            <div class="quotes">
+                                <p>As we say 'I do,' let's paint our life canvas with understanding, patience, and a love deepening with every moment.</p>
+                            </div>
+                            <div class="rsvp3">
+                                <a href="#rsvp">Save My Seat</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- <img src="/WeddingWebsite/photos/nameLogo.png" alt="nameLogo"> -->
+
     <!-- 3. About Us -->
     <section id="about">
-        <h2>About Us</h2>
-        <p>Our love story...</p>
-        <p>How we got engaged...</p>
+        <div class="flowerBed-element">
+            <img src="/WeddingWebsite/photos/element.png" alt="FlowerBedSilhouette">
+        </div>
+        <div class="logo-middle">
+            <img src="/WeddingWebsite/photos/LogoNameCursive.png" alt="logoCursive">
+        </div>
+        <div class="about-content">
+            <div class="content-container">
+                <p>Welcome to the celebration of love between Frederick & Marlie! Your presence means the world to us. Join us on this enchanting journey as we unite our lives and hearts in joyous matrimony.
+                </p>
+                <p>We can't wait to share this magical day with you!</p>
+            </div>
+        </div>
+        <div class="rsvp-about">
+            <a href="#rsvp">Save My Seat</a>
+        </div>
+        <div class="clock-container">
+            <div class="timer">
+                <div class="clock-col">
+                    <p class="clock-day clock-timer">
+                    </p>
+                    <p class="clock-label">
+                        Days
+                    </p>
+                </div>
+                <div class="clock-col">
+                    <p class="clock-hours clock-timer">
+                    </p>
+                    <p class="clock-label">
+                        Hours
+                    </p>
+                </div>
+                <div class="clock-col">
+                    <p class="clock-minutes clock-timer">
+                    </p>
+                    <p class="clock-label">
+                        Minutes
+                    </p>
+                </div>
+                <div class="clock-col">
+                    <p class="clock-seconds clock-timer">
+                    </p>
+                    <p class="clock-label">
+                        Seconds
+                    </p>
+                </div>
+            </div>
+            <div class="untilTheDay">
+                <p>UNTIL OUR SPECIAL DAY!!!</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="about-us">
+                <p>Our love story...</p>
+                <p>How we got engaged...</p>
+            </div>
+        </div>
     </section>
 
     <!-- 4. Event Details -->
     <section id="event">
-        <h2>Event Details</h2>
-        <p>Ceremony and reception venue details...</p>
-        <p>Schedule or timeline of events...</p>
+        <div class="container">
+            <h2>Event Details</h2>
+            <p>Ceremony and reception venue details...</p>
+            <p>Schedule or timeline of events...</p>
+        </div>
     </section>
 
     <!-- 5. RSVP -->
     <section id="rsvp">
-        <h2>RSVP</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+        <div class="container">
+            <h2>RSVP</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="rsvpStatus">RSVP Status:</label>
-            <select id="rsvpStatus" name="rsvpStatus" required>
-                <option value="attending">Attending</option>
-                <option value="notAttending">Not Attending</option>
-            </select>
+                <label for="rsvpStatus">RSVP Status:</label>
+                <select id="rsvpStatus" name="rsvpStatus" required>
+                    <option value="attending">Attending</option>
+                    <option value="notAttending">Not Attending</option>
+                </select>
 
-            <label for="dietaryRestrictions">Dietary Restrictions:</label>
-            <input type="text" id="dietaryRestrictions" name="dietaryRestrictions">
+                <label for="dietaryRestrictions">Dietary Restrictions:</label>
+                <input type="text" id="dietaryRestrictions" name="dietaryRestrictions">
 
-            <button type="submit">Submit</button>
-        </form>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </section>
 
     <!-- Add other sections -->
 
     <footer>
-        <p>&copy; 2023 John & Jane</p>
+        <div class="container">
+            <p>&copy; Frederick & Marlie 2024</p>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/WeddingWebsite/wedScript.js"></script>
+    <script src="https://kit.fontawesome.com/56c4bc5aad.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
