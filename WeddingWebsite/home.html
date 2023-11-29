@@ -177,35 +177,47 @@
         </div>
     </section>
 
-    4. Event Details
     <section id="event">
-        <div class="container">
-            <h2>Event Details</h2>
-            <p>Ceremony and reception venue details...</p>
-            <p>Schedule or timeline of events...</p>
+        <div class="event-container">
+            <div class="event-header">
+                <h3>Event Details</h3>
+                <p>Ceremony and reception venue details...</p>
+                <p>Schedule or timeline of events...</p>
+            </div>
         </div>
     </section>
 
-    5. RSVP
     <section id="rsvp">
-        <div class="container">
+        <div class="rsvp-container">
             <h2>RSVP</h2>
             <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="rsvpStatus">RSVP Status:</label>
-                <select id="rsvpStatus" name="rsvpStatus" required>
-                    <option value="attending">Attending</option>
-                    <option value="notAttending">Not Attending</option>
-                </select>
-
-                <label for="dietaryRestrictions">Dietary Restrictions:</label>
-                <input type="text" id="dietaryRestrictions" name="dietaryRestrictions">
-
+                <div class="form-column1">
+                    <div class="input-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+            
+                    <div class="input-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+            
+                <div class="form-column2">
+                    <div class="input-group">
+                        <label for="rsvpStatus">RSVP Status:</label>
+                        <select id="rsvpStatus" name="rsvpStatus" required>
+                            <option value="attending">Attending</option>
+                            <option value="notAttending">Not Attending</option>
+                        </select>
+                    </div>
+            
+                    <div class="input-group">
+                        <label for="Attendees"># of Confirmed Attendees:</label>
+                        <input type="text" id="Attendees" name="Attendees">
+                    </div>
+                </div>
+            
                 <button type="submit">Submit</button>
             </form>
         </div>

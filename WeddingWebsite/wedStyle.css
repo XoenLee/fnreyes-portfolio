@@ -469,6 +469,10 @@ div.carousel-container > ul {
 
 div.story-container{
     padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 div.story-imgContainer {
@@ -479,7 +483,7 @@ div.story-container div.story-header {
     width: 65%;
 }
 
-div.story-container, div.story-imgContainer {
+div.story-imgContainer {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -506,6 +510,83 @@ div.story-image img {
     border-radius: 10px;
 }
 /* end of story section */
+
+/* start of event details */
+
+div.event-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+div.event-container div.event-header {
+    width: 65%;
+}
+
+div.event-header h3 {
+    padding-bottom: 5px;
+}
+
+/* end of event details */
+
+/* rsvp details  */
+
+#rsvp {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#rsvp div.rsvp-container {
+    width: 65%;
+    padding-top: 50px;
+}
+
+div.rsvp-container form {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if there's not enough space */
+    justify-content: space-between; /* Add space between columns */
+    max-width: 600px; /* Set a maximum width for the form, adjust as needed */
+    margin: 0 auto; /* Center the form */
+}
+
+.form-column1,
+.form-column2 {
+    flex-basis: calc(50% - 10px); /* Each column takes 50% of the available width with 10px spacing between them */
+    margin-bottom: 20px; /* Add some bottom margin to separate rows */
+}
+
+/* Add additional styling as needed for labels and inputs */
+div.rsvp-container label {
+    display: block; /* Display labels as block elements to stack them vertically */
+    margin-bottom: 5px; /* Add spacing below labels */
+}
+
+div.rsvp-container input,
+div.rsvp-container select {
+    width: 100%; /* Make the inputs and select fill the available width */
+    padding: 8px; /* Add padding for better appearance */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+div.rsvp-container button {
+    width: 100%; /* Make the button fill the available width */
+    padding: 10px; /* Add padding for better appearance */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+/* end of rsvp details  */
+
 
 footer {
     background-color: #00141F;
