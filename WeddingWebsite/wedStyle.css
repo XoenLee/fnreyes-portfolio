@@ -294,6 +294,7 @@ div.carousel-container > ul {
 
 .flowerBed-element {
     position: relative;
+    overflow: hidden;
 }
 
 .flowerBed-element img {
@@ -301,6 +302,7 @@ div.carousel-container > ul {
     top: -100px;
     width: 1920px;
     z-index: 999;
+    overflow: hidden;
 }
 
 .logo-middle {
