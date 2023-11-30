@@ -86,8 +86,8 @@ const x = setInterval(function() {
 }, 1000);
 
 let currentIndex = 0;
-const images = ["photos/4.JPG", "photos/5.JPG", "photos/30.JPG", "photos/9.JPG", "photos/18.JPG", "photos/11.JPG", "photos/21.JPG", 
-"photos/23.JPG", "photos/29.JPG", "photos/6.JPG", "photos/38.JPG", "photos/35.JPG", "photos/45.JPG", "photos/55.JPG", "photos/37.JPG"/* Add more image URLs as needed */];
+const images = ["photos/4.JPG", "photos/5.JPG", "photos/30.JPG", "photos/9.JPG", "photos/35.JPG", "photos/11.JPG", "photos/21.JPG", 
+"photos/23.JPG", "photos/29.JPG"/* Add more image URLs as needed */];
 
 function openModal(imageSrc) {
     const modal = document.getElementById('myModal');
