@@ -730,6 +730,7 @@ img {
     grid-auto-flow: dense;
     justify-items: center;
     width: 65%;
+    position: relative;
 }
 
 .grid-wrapper .tall {
@@ -740,3 +741,53 @@ img {
     grid-column: span 2;
     grid-row: span 2;
 }
+
+/* Styles for the modal */
+#myModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal .modal-content {
+    width: 80%;
+    max-width: 640px;
+    height: 900px;
+    margin: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.close {
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+  /* Styles for the modal arrows */
+.arrow {
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.arrow.left {
+    left: 20px;
+}
+
+.arrow.right {
+    right: 20px;
+}
+
+
+  /* end of gallery */

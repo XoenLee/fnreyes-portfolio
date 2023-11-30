@@ -195,64 +195,72 @@
         <div class="gallery-photos">
             <div class="grid-wrapper">
                 <div class="big">
-                    <img src="photos/4.JPG" alt="">
+                    <img src="photos/4.JPG" alt="" class="gallery-image" onclick="openModal('photos/4.JPG')">
 
                 </div>
                 <div class="tall">
-                    <img src="photos/5.JPG" alt="">
+                    <img src="photos/5.JPG" alt="" class="gallery-image" onclick="openModal('photos/5.JPG')">
                     
                 </div>
                 <div class="tall">
-                    <img src="photos/30.JPG" alt="">
+                    <img src="photos/30.JPG" alt="" class="gallery-image" onclick="openModal('photos/30.JPG')">
                     
                 </div>
                 <div class="tall">
-                    <img src="photos/9.JPG" alt="">
+                    <img src="photos/9.JPG" alt="" class="gallery-image" onclick="openModal('photos/9.JPG')">
                     
                 </div>
                 <div class="tall">
-                    <img src="photos/18.JPG" alt="">
+                    <img src="photos/18.JPG" alt="" class="gallery-image" onclick="openModal('photos/18.JPG')">
                     
                 </div>
                 <div class="big">
-                    <img src="photos/11.JPG" alt="">
+                    <img src="photos/11.JPG" alt="" class="gallery-image" onclick="openModal('photos/11.JPG')">
                     
                 </div>
                 <div class="big">
-                    <img src="photos/21.JPG" alt="">
+                    <img src="photos/21.JPG" alt="" class="gallery-image" onclick="openModal('photos/21.JPG')">
                     
                 </div>
                 <div class="tall">
-                    <img src="photos/23.JPG" alt="">
+                    <img src="photos/23.JPG" alt="" class="gallery-image" onclick="openModal('photos/23.JPG')">
                     
                 </div>
                 <div class="tall">
-                    <img src="photos/29.JPG" alt="">
+                    <img src="photos/29.JPG" alt="" class="gallery-image" onclick="openModal('photos/29.JPG')">
                     
                 </div>
                 <div class="tall">
-                    <img src="photos/6.JPG" alt="">
+                    <img src="photos/6.JPG" alt="" class="gallery-image" onclick="openModal('photos/6.JPG')">
                     
                 </div>
                 <div class="tall">
-                    <img src="photos/38.JPG" alt="">
+                    <img src="photos/38.JPG" alt="" class="gallery-image" onclick="openModal('photos/38.JPG')">
                     
                 </div>
                 <div class="big">
-                    <img src="photos/35.JPG" alt="">
+                    <img src="photos/35.JPG" alt="" class="gallery-image" onclick="openModal('photos/35.JPG')">
                     
                 </div>
                 <div class="big">
-                    <img src="photos/45.JPG" alt="">
+                    <img src="photos/45.JPG" alt="" class="gallery-image" onclick="openModal('photos/45.JPG')">
                     
                 </div>
                 <div class="tall">
-                    <img src="photos/55.JPG" alt="">
+                    <img src="photos/55.JPG" alt="" class="gallery-image" onclick="openModal('photos/55.JPG')">
                     
                 </div>
                 <div class="tall">
-                    <img src="photos/37.JPG" alt="">
+                    <img src="photos/37.JPG" alt="" class="gallery-image" onclick="openModal('photos/37.JPG')">
                     
+                </div>
+
+                <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="modalImage">
+                    <span class="arrow left" onclick="changeImage(-1)">&#9665;</span>
+                    <span class="arrow right" onclick="changeImage(1)">&#9655;</span>
+                    </button>
                 </div>
             </div>
         </div>
