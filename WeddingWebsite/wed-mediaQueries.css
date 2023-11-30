@@ -70,6 +70,18 @@
         font-size: 0.875rem;
     }
 
+    .grid-wrapper .big {
+        grid-column: span 2;
+        grid-row: unset;
+    }
+
+    .grid-wrapper .tall {
+        grid-column: span 1;
+    }
+
+    .grid-wrapper {
+        width: 80%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
