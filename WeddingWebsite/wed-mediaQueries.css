@@ -72,7 +72,7 @@
 
     .grid-wrapper .big {
         grid-column: span 2;
-        grid-row: unset;
+        grid-row: span 2;
     }
 
     .grid-wrapper .tall {
@@ -80,7 +80,7 @@
     }
 
     .grid-wrapper {
-        width: 80%;
+        width: 90%;
     }
 }
 
@@ -255,4 +255,16 @@
     .logoName-details p {
         font-size: 0.875rem;
     }
+
+    .grid-wrapper .big {
+        grid-column: span 1;
+        grid-row: span 2;
+        align-content: center;
+    }
+
+    .grid-wrapper .tall {
+        grid-column: span 1;
+        align-content: center;
+    }
+
 }
