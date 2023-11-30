@@ -93,7 +93,7 @@ function openModal(imageSrc) {
     const modal = document.getElementById('myModal');
     const modalImage = document.getElementById('modalImage');
 
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
     modalImage.src = imageSrc;
     currentIndex = images.indexOf(imageSrc);
 }
