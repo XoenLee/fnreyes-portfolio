@@ -1,6 +1,21 @@
+/* 
+
+color palette
+
+#111111 black
+#2F2F2F grey
+#f6f6f6 white
+#ffCB74 gold
+#00141F bluish black
+#1c2263 royal blue
+
+*/
+
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 *, 
 *::before,
@@ -8,11 +23,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-rendering: optimizeLegibility; /* Provides optimal quality */
+    -webkit-font-smoothing: antialiased; /* For Chrome and Safari */
+    -moz-osx-font-smoothing: grayscale; /* For Firefox on macOS */
 }
 
 body {
-    color: #fff;
-    background-color: #00141F;
+    color: #765830;
+    background-color: #f6f6f6;
     font-family: "Lora", "Montserrat", "Poppins", sans-serif;
     margin: 0;
     padding: 0;
@@ -41,26 +59,67 @@ a {
     font-size: 1.25rem;
 }
 
+h2.header-text {
+    font-family: 'Great Vibes';
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+    padding: 30px 0;
+}
+
+header.flowerHead-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div.flower-header {
+    width: 100%;
+    height: 450px;
+    background-image: url("photos/flowerHead.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    position: relative;
+}
+
 #heroSection {
     position: relative;
 }
 
-#home .container {
-    background-color: #1c2263;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+.logoName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
 }
 
-.navbar {
-    color: #00141F;
+.logoName-details img {
+    width: 80%;
+}
+
+.logoName-details p {
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: 1.125rem;
 }
 
 .navbar-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #00141F;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .navbar-links {
@@ -71,20 +130,21 @@ a {
 
 .navbar-links a {
     text-decoration: none;
-    color: white;
+    color: #727272;
     transition: color 0.3s ease-in-out;
 }
 
-.navbar-links a:first-of-type, .navbar-links :nth-of-type(2){
-    margin-right: 20px;
+.navbar-links a{
+    margin: 0 20px;
 }
 
-.navbar-links a:nth-of-type(3), .navbar-links a:nth-of-type(4){
-    margin-left: 20px;
+.navbar-links a:active {
+    text-decoration: underline;
 }
 
 .navbar-links a:hover {
-    color: #326E92;
+    color: #224f6b;
+    text-decoration: underline;
 }
 
 .logoResp {
@@ -106,19 +166,8 @@ a {
 .navbar-toggle span {
     height: 5px;
     width: 35px;
-    background-color: #fff;
+    background-color: #765830;
     margin: 4px 0;
-}
-
-.logoName .logo {
-    width: 150px;
-    margin: 5px 0;
-}
-
-.logoName {
-    display: flex;
-    align-items: center;
-    justify-content: start;
 }
 
 #heroSection, #heroSection-2, #heroSection-3 {
@@ -242,13 +291,14 @@ div.quotes {
     font-weight: 500;
     border: 1px solid white;
     padding: 10px 20px;
-    background-color: #1c2263;
+    background-color: #5A86AD;
     font-size: 1rem;
 }
 
 .rsvp a:hover, .rsvp2 a:hover, .rsvp3 a:hover {
     border-radius: 5px;
     border: none;
+    background-color: #1c2263;
     transition: 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -268,7 +318,7 @@ div.carousel-container > ul {
     position: absolute;
     inset: 0;
     opacity: 0;
-    transition: 200ms opacity ease-in-out;
+    transition: 200ms ease-in-out;
     transition-delay: 200ms;
 }
 
@@ -348,6 +398,7 @@ div.carousel-container > ul {
 .about-content .content-container {
     width: 65%;
     margin-bottom: 20px;
+    margin-top: 50px;
 }
 
 .content-container p {
@@ -357,14 +408,14 @@ div.carousel-container > ul {
 .rsvp-about {
     display: flex;
     justify-content: center;
+    padding-bottom: 30px;
 }
 
 .rsvp-about a {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
-    border: 1px solid white;
-    background-color: #1c2263;
+    background-color: #5A86AD;
     padding: 10px 30px;
 }
 
@@ -426,6 +477,7 @@ div.carousel-container > ul {
     margin-left: 40px;
     min-width: 90px;
     position: relative;
+    color: #f6f6f6;
 }
 
 .clock-col:not(:last-child):before,
@@ -542,6 +594,7 @@ div.event-header h3 {
 #rsvp div.rsvp-container {
     width: 75%;
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 div.rsvp-container form {
@@ -575,14 +628,27 @@ div.rsvp-container button {
     width: 100%; /* Make the button fill the available width */
     padding: 10px; /* Add padding for better appearance */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    background-color: #4CAF50; /* Green background color */
+    background-color: #5A86AD; /* Green background color */
     color: white; /* White text color */
     border: none; /* Remove border */
     border-radius: 5px; /* Add rounded corners */
 }
 
+div.rsvp-container button:hover {
+    transition: 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background-color: #1c2263; /* Green background color */
+}
+
 .input-group {
     margin-bottom: 10px;
+}
+.input-group select {
+    color: #765830;
+    font-family: 'Lora';
+}
+
+form button {
+    font-family: 'Lora';
 }
 
 /* end of rsvp details  */

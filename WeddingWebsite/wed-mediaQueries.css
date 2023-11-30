@@ -1,4 +1,19 @@
-@media (max-width: 825px) {
+@media (max-width: 1440px) {
+    div.flower-header {
+        background-image: url("photos/flowerHead1440.png");
+    }
+}
+
+@media (max-width: 1080px) {
+    div.flower-header {
+        background-image: url("photos/flowerHead1080.png");
+    }
+}
+
+@media (max-width: 864px) {
+    div.flower-header {
+        background-image: url("photos/flowerHead864.png");
+    }
     .clock-container {
         padding: 20px 0;
     }
@@ -38,28 +53,59 @@
         font-size: 0.875rem;
         margin-top: 10px;
     }
+
+    .navbar-container {
+        width: 80%;
+    }
+
+    .navbar-links a {
+        font-size: 0.875rem;
+    }
+
+    .logoName-details img {
+        width: 100%;
+    }
+
+    .logoName-details p {
+        font-size: 0.875rem;
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
 
     p {
-        font-size: 1rem;
+        font-size: 0.875rem;
     }
     
     h3 {
-        font-size: 1.125rem;
+        font-size: 1rem;
     }
     
     h2 {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
     }
     
     h1 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
     
     a {
-        font-size: 1rem;
+        font-size: 0.875rem;
+    }
+
+    .logoName {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .logoName-details img {
+        width: 100%;
+    }
+
+    .logoName-details p {
+        font-size: 0.875rem;
     }
 
     .navbar-links {
@@ -71,14 +117,11 @@
         left: 0;
         background-color: #1c2263;
         z-index: 9999;
+        border-radius: 10px;
     }
 
     .navbar-links a:first-of-type, .navbar-links :nth-of-type(2){
         margin-right: 0;
-    }
-    
-    div.logoName {
-        display: none;
     }
 
     .navbar-links a:nth-of-type(3), .navbar-links a:nth-of-type(4){
@@ -89,6 +132,7 @@
         margin: 0;
         padding: 15px;
         display: block;
+        color: #f6f6f6;
     }
     .navbar-container {
         justify-content: center;
@@ -98,7 +142,7 @@
     .hamburg {
         display: flex;
         width: 100%;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
     }
 
@@ -177,12 +221,26 @@
 }
 
 @media only screen and (max-width: 600px) {
+    
+    div.flower-header {
+        background-image: url("photos/flowerHead600.png");
+        height: 350px;
+    }
+    
     div.story-image {
         margin-top: 0px;
     }
     
     div.story-image img {
+        width: 70%;
+        height: 70%;
+    }
+
+    .logoName {
         width: 80%;
-        height: 80%;
+    }
+
+    .logoName-details p {
+        font-size: 0.875rem;
     }
 }
