@@ -527,6 +527,8 @@ div.story-container {
     justify-content: center;
     text-align: center;
     align-items: center;
+    width: 80%;
+    margin: auto;
 }
 
 
@@ -570,6 +572,8 @@ div.event-container {
     justify-content: center;
     text-align: center;
     align-items: center;
+    width: 80%;
+    margin: auto;
 }
 
 div.event-container div.event-header {
@@ -679,6 +683,8 @@ div.gallery-container {
     justify-content: center;
     text-align: center;
     align-items: center;
+    width: 80%;
+    margin: auto;
 }
 
 div.gallery-header {
