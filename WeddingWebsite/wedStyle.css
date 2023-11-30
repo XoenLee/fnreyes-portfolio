@@ -293,6 +293,7 @@ div.quotes {
     padding: 10px 20px;
     background-color: #5A86AD;
     font-size: 1rem;
+    border-radius: 5px;
 }
 
 .rsvp a:hover, .rsvp2 a:hover, .rsvp3 a:hover {
@@ -417,6 +418,7 @@ div.carousel-container > ul {
     font-weight: 500;
     background-color: #5A86AD;
     padding: 10px 30px;
+    border-radius: 5px;
 }
 
 .rsvp-about a:hover {
