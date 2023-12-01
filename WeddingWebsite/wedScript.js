@@ -127,6 +127,15 @@ function initMap() {
         center: { lat: 14.456895, lng: 120.944126 }
     });
     
+    // Add a click event listener to the map
+    map.addListener('click', function(event) {
+        // Open Google Maps app with directions from clicked location to the destination
+        var url = 'https://www.google.com/maps/dir/?api=1&origin=' +
+                event.latLng.lat() + ',' + event.latLng.lng() +
+                '&destination=' + endMarker.getPosition().lat() + ',' + endMarker.getPosition().lng();
+        window.open(url, '_blank');
+    });
+
     directionsRenderer.setMap(map);
 
     // Create a marker for the starting point with a label
