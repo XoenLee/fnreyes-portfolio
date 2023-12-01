@@ -115,3 +115,54 @@ function changeImage(direction) {
     const modalImage = document.getElementById('modalImage');
     modalImage.src = images[currentIndex];
 }
+
+// map 
+//
+
+function initMap() {
+    var directionsService = new google.maps.DirectionsService();
+    var directionsRenderer = new google.maps.DirectionsRenderer();
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 7,
+        center: { lat: 14.456895, lng: 120.944126 }
+    });
+    
+    directionsRenderer.setMap(map);
+
+    // Create a marker for the starting point with a label
+    var startMarker = new google.maps.Marker({
+        position: { lat: 14.536262, lng: 120.982006 },
+        map: map,
+    });
+
+    // Create a marker for the destination with a label
+    var endMarker = new google.maps.Marker({
+        position: { lat: 14.402908, lng: 120.903986 },
+        map: map,
+    });
+
+    // Define the end location
+    var start = startMarker.getPosition();
+    var end = endMarker.getPosition(); // Use the marker's position as the destination
+
+    // Create a request object for directions
+    var request = {
+        origin: start, // Use the starting marker's position as the origin
+        destination: end,
+        travelMode: 'DRIVING'
+    };
+
+    // Use the Directions Service to get the route
+    directionsService.route(request, function(result, status) {
+        if (status == 'OK') {
+            // Display the route on the map
+            directionsRenderer.setDirections(result);
+        } else {
+            console.error('Error:', status);
+        }
+    });
+}
+
+window.onload = function () {
+    initMap();
+};

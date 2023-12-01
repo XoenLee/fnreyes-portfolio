@@ -6,6 +6,7 @@ color palette
 #2F2F2F grey
 #f6f6f6 white
 #ffCB74 gold
+#765830 dark gold
 #00141F bluish black
 #1c2263 royal blue
 
@@ -396,7 +397,7 @@ div.carousel-container > ul {
     margin: auto;
 }
 
-.about-content .content-container {
+.content-container {
     width: 65%;
     margin-bottom: 20px;
     margin-top: 50px;
@@ -523,7 +524,7 @@ div.carousel-container > ul {
 /* story section */
 
 div.story-container {
-    padding-top: 30px;
+
     display: flex;
     justify-content: center;
     text-align: center;
@@ -542,6 +543,7 @@ div.story-imgContainer{
     justify-content: center;
     text-align: center;
     align-items: center;
+    padding-bottom: 30px;
 }
 
 div.story-header h3 {
@@ -558,12 +560,40 @@ div.story-image {
 
 div.story-image img {
     width: 80%;
-    height: 80%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
 }
 /* end of story section */
+
+/* reminders section  */
+
+div.reminder-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+div.reminder-header {
+    width: 65%;
+}
+
+div.reminder-header li {
+    list-style-type: none;
+}
+
+div.reminder-header ul {
+    padding: 10px 0;
+    width: 80%;
+    margin: auto;
+    text-align: left;
+}
+
+/* end of reminders section  */
 
 /* start of event details */
 
@@ -576,15 +606,28 @@ div.event-container {
     margin: auto;
 }
 
-div.event-container div.event-header {
+div.event-header {
     width: 65%;
 }
 
-div.event-header h3 {
-    padding-bottom: 5px;
+/* end of event details */
+
+/* map */
+
+div.map-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
 }
 
-/* end of event details */
+div.map-header {
+    width: 65%;
+}
+
+/* end of map */
 
 /* rsvp details  */
 
@@ -677,8 +720,20 @@ div.container {
 
 /* gallery */
 
+div.line-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+div.line-divider img {
+    width: 20%;
+}
+
 div.gallery-container {
-    padding: 30px 0;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -793,5 +848,94 @@ img {
     right: 20px;
 }
 
+div.more-photos {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
 
+div.more-photos a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        background-color: #5A86AD;
+        padding: 10px 30px;
+        border-radius: 5px;
+}
+    
+div.more-photos a:hover {
+        background-color: #1c2263;
+        border-radius: 5px;
+        border: none;
+        transition: 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* optional photos */
+
+div.optional {
+    display: none;
+}
   /* end of gallery */
+
+
+  /* map  */
+.google-maps {
+    display: flex;
+    justify-content: center;
+}
+
+#map {
+    height: 400px; /* Set the height of the map container */
+    width: 50%;   /* Set the width of the map container */
+    border-radius: 15px;
+}
+
+  /* others    */
+hr {
+    margin: 5px;
+}
+
+h3 {
+    padding: 10px 0;
+}
+
+h3 ~ p {
+    padding-bottom: 30px;
+}
+
+#gallery {
+    background-color:#00141F;
+    margin: 30px 0;
+    color: #f6f6f6 !important;
+}
+
+.hr-text {
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: #765830;
+    text-align: center;
+    height: 1.5em;
+    opacity: 0.5;
+  }
+  
+  .hr-text:before {
+    content: '';
+    background: linear-gradient(to right, transparent, #818078, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+  
+  .hr-text:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: #765830;
+    padding: 0 .5em;
+    line-height: 1.5em;
+  }
+  

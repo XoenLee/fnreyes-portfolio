@@ -1,3 +1,9 @@
+@media (min-width: 1585px) {
+    div.optional {
+        display: block;
+    }
+}
+
 @media (max-width: 1440px) {
     div.flower-header {
         background-image: url("photos/flowerHead1440.png");
@@ -11,6 +17,11 @@
 }
 
 @media (max-width: 864px) {
+
+    div.line-divider img {
+        width: 30%;
+    }
+
     div.flower-header {
         background-image: url("photos/flowerHead864.png");
     }
@@ -85,6 +96,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+    
+    #map {
+        width: 75%;
+    }
 
     p {
         font-size: 0.875rem;
@@ -104,6 +119,18 @@
     
     a {
         font-size: 0.875rem;
+    }
+
+    li {
+        font-size: 0.875rem;
+    }
+
+    div.content-container, div.content-header, div.story-header, div.gallery-header, div.reminder-header, div.event-header, div.map-header {
+        width: 100%;
+    }
+
+    div.line-divider img {
+        width: 40%;
     }
 
     .logoName {
@@ -233,6 +260,10 @@
 
 @media only screen and (max-width: 600px) {
     
+    div.line-divider img {
+        width: 50%;
+    }
+
     div.flower-header {
         background-image: url("photos/flowerHead600.png");
         height: 225px;

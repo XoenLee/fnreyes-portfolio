@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2sdczLeisyOGvN3ju0XLUNRj2YqNTHaA&libraries=places"></script>
     <link rel="stylesheet" href="wedStyle.css">
     <link rel="stylesheet" href="wed-mediaQueries.css">
     <title>Frederick & Marlie's Wedding</title>
@@ -171,8 +172,12 @@
 
     <!-- story -->
     <section id="story">
+        <div class="line-divider">
+            <img src="photos/lineDivider3-dark.png" alt="line divider">
+        </div>
         <div class="story-container">
             <div class="story-header">
+                <hr class="hr-text"><h2>Engagement</h2><hr class="hr-text">
                 <h3>Our Sparkling Promise.</h3>
                 <p>The ring that sparks our forever – a radiant emblem of shared dreams and laughter, binding our next chapter in life.</p>
             </div>
@@ -186,8 +191,12 @@
     <!-- gallery -->
 
     <section id="gallery">
+        <div class="line-divider">
+            <img src="photos/lineDivider1.png" alt="line divider">
+        </div>
         <div class="gallery-container">
             <div class="gallery-header">
+                <hr class="hr-text"><h2>Gallery</h2><hr class="hr-text"> 
                 <h3>Pre-wedding Photo Collection</h3>
                 <p>Explore the anticipation and excitement leading up to the big day. These moments are a glimpse into the love that grows stronger with each passing day.</p>
             </div>
@@ -214,20 +223,8 @@
                     <img src="photos/35.JPG" alt="" class="gallery-image" onclick="openModal('photos/35.JPG')">
                     
                 </div>
-                <div class="big">
+                <div class="big optional">
                     <img src="photos/30.JPG" alt="" class="gallery-image" onclick="openModal('photos/30.JPG')">
-                    
-                </div>
-                <div class="big">
-                    <img src="photos/37.JPG" alt="" class="gallery-image" onclick="openModal('photos/37.JPG')">
-                    
-                </div>
-                <div class="tall">
-                    <img src="photos/52.JPG" alt="" class="gallery-image" onclick="openModal('photos/52.JPG')">
-                    
-                </div>
-                <div class="tall">
-                    <img src="photos/44.JPG" alt="" class="gallery-image" onclick="openModal('photos/44.JPG')">
                     
                 </div>
 
@@ -238,24 +235,78 @@
                     <span class="arrow right" onclick="changeImage(1)">&#9655;</span>
                     </button>
                 </div>
+
+                
+            </div>
+        </div>
+        <div class="more-photos">
+            <a href="#seeMore">See More</a>
+        </div>
+    </section>
+
+    <!-- Reminders -->
+
+    <section id="reminders">
+        <div class="line-divider">
+            <img src="photos/lineDivider3-dark.png" alt="line divider">
+        </div>
+        <div class="reminder-container">
+            <div class="reminder-header">
+                <hr class="hr-text"><h2>What to Wear</h2><hr class="hr-text">
+                <p>Prepare for a day filled with love and celebration by choosing an outfit that suits the occasion. Here's a guide to help you dress for the festivities:</p>
+
+                <ul>
+                    <li><strong>Attire:</strong> Semi-formal attire is recommended for our wedding celebration.</li>
+                    <li><strong>Color Palette:</strong> Kindly opt for attire featuring shades or elements of <strong style="color: #1c2263;">BLUE</strong>, as we aim for a cohesive theme, but we suggest avoiding white to let the bride shine.</li>
+                    <li><strong>Dress Code:</strong> While there's no strict dress code, we encourage you to embrace your personal style and dress in a way that makes you feel fantastic.</li>
+                </ul>
+
+                <p>If you have any questions or need further clarification on the dress code, feel free to reach out. Your presence is what matters most, and we're excited to celebrate this joyous occasion with you!</p>
             </div>
         </div>
     </section>
 
     <!-- event details -->
     <section id="event">
+        <div class="line-divider">
+            <img src="photos/lineDivider3-dark.png" alt="line divider">
+        </div>
         <div class="event-container">
             <div class="event-header">
-                <h3>Event Details</h3>
+                <hr class="hr-text"><h2>Event Details</h2><hr class="hr-text">
+                <h3>When, Where, & Why</h3>
                 <p>Ceremony and reception venue details...</p>
                 <p>Schedule or timeline of events...</p>
             </div>
         </div>
     </section>
 
+    <!-- navigation -->
+    <section id="Navigation">
+        <div class="line-divider">
+            <img src="photos/lineDivider3-dark.png" alt="line divider">
+        </div>
+        <div class="map-container">
+            <div class="map-header">
+                <hr class="hr-text"><h2>Navigational Map</h2><hr class="hr-text">
+                <h3>Directions to the location of the ceremony.</h3>
+                <p>From <strong>PIN A:</strong> Mall of Asia to <strong>PIN B:</strong> the Parish of the Holy Family, Imus, Cavite.</p>
+                <!-- <p>FROM PIN A: Mall of Asia</p>
+                <p>TO PIN B: Ceremony Location</p> -->
+        </div>
+    </section>
+
+    <section class="google-maps">
+        <div id="map">
+
+        </div>
+    </section>
+
     <section id="rsvp">
         <div class="rsvp-container">
             <h2>RSVP</h2>
+            <h3>Reserve Your Seat Here.</h3>
+            <p>Please RSVP by [Date]. We can't wait to celebrate with you!</p>
             <form>
                 <div class="form-column1">
                     <div class="input-group">
