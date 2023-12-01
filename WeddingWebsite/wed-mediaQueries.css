@@ -116,6 +116,25 @@
     .grid-wrapper {
         width: 90%;
     }
+
+    div.color-code  {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: auto;
+    }
+    
+    div.circle1, div.circle2, div.circle3, div.circle4 {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 0.725rem;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -148,8 +167,12 @@
         font-size: 0.875rem;
     }
 
-    div.content-container, div.content-header, div.story-header, div.gallery-header, div.reminder-header, div.event-header, div.map-header {
+    div.content-container, div.content-header, div.story-header, div.gallery-header, div.reminder-header, div.event-header, div.map-header, div.gifts-container {
         width: 100%;
+    }
+
+    div.gifts-header {
+        width: 85%;
     }
 
     div.line-divider img {
