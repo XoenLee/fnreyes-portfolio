@@ -822,10 +822,16 @@ form button {
 
 
 footer {
-    background-color: #00141F;
+    position: relative;
     text-align: center;
-    padding: 10px;
-    color: #fff;
+    color: #00141F;
+}
+
+div.footer-container {
+    position: absolute;
+    bottom: 30%;
+    left: 50%; /* Center the container horizontally */
+    transform: translateX(-50%); /* Move the container back by half of its width */
 }
 
 /* sections styling*/
@@ -1052,4 +1058,27 @@ h3 ~ p {
     padding: 0 .5em;
     line-height: 1.5em;
   }
-  
+
+/* flowers under  */
+
+header.flowerFoot-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div.flower-footer {
+    width: 100%;
+    height: 450px;
+    /* background-image: url("photos/flowerHead.png"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+}
