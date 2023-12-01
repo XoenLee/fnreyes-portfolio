@@ -9,6 +9,7 @@ color palette
 #765830 dark gold
 #00141F bluish black
 #1c2263 royal blue
+#5A86AD dusty blue
 
 */
 
@@ -582,6 +583,10 @@ div.reminder-header {
     width: 65%;
 }
 
+div.reminder-header p{
+    text-align: left;
+}
+
 div.reminder-header li {
     list-style-type: none;
 }
@@ -593,9 +598,39 @@ div.reminder-header ul {
     text-align: left;
 }
 
+div.column-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div.column1 img {
+    width: 100%;
+    
+}
+
+.column1 {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.column2 {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
 /* end of reminders section  */
 
 /* start of event details */
+
+#event {
+    background-color: #00141F;
+    color: #f6f6f6;
+    margin-top: 30px;
+}
 
 div.event-container {
     display: flex;
@@ -604,6 +639,7 @@ div.event-container {
     align-items: center;
     width: 80%;
     margin: auto;
+
 }
 
 div.event-header {

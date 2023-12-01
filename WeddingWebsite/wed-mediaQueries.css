@@ -4,6 +4,14 @@
     }
 }
 
+@media (max-width: 1584px) {
+    
+    div.column1 img {
+        height: 400px;
+        object-fit: cover;
+    }
+}
+
 @media (max-width: 1440px) {
     div.flower-header {
         background-image: url("photos/flowerHead1440.png");
@@ -13,6 +21,21 @@
 @media (max-width: 1080px) {
     div.flower-header {
         background-image: url("photos/flowerHead1080.png");
+    }
+
+    .column1, .column2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    div.column1 {
+        height: 350px;
+        object-fit: contain;
+    }
+
+    div.column1 img {
+        height: 100%;
+        object-fit: contain;
     }
 }
 
@@ -255,6 +278,21 @@
     div.story-image img {
         width: 100%;
         height: 100%;
+    }
+
+    .column1, .column2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    div.column1 {
+        height: 350px;
+        object-fit: contain;
+    }
+
+    div.column1 img {
+        height: 100%;
+        object-fit: contain;
     }
 }
 
