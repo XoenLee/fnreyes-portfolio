@@ -85,37 +85,6 @@ const x = setInterval(function() {
     }
 }, 1000);
 
-let currentIndex = 0;
-const images = ["photos/4.JPG", "photos/5.JPG", "photos/11.JPG", "photos/9.JPG", "photos/35.JPG", "photos/30.JPG", "photos/37.JPG", 
-"photos/52.JPG", "photos/44.JPG"/* Add more image URLs as needed */];
-
-function openModal(imageSrc) {
-    const modal = document.getElementById('myModal');
-    const modalImage = document.getElementById('modalImage');
-
-    modal.style.display = 'flex';
-    modalImage.src = imageSrc;
-    currentIndex = images.indexOf(imageSrc);
-}
-
-function closeModal() {
-    const modal = document.getElementById('myModal');
-    modal.style.display = 'none';
-}
-
-function changeImage(direction) {
-    currentIndex += direction;
-
-    if (currentIndex < 0) {
-        currentIndex = images.length - 1;
-    } else if (currentIndex >= images.length) {
-        currentIndex = 0;
-    }
-
-    const modalImage = document.getElementById('modalImage');
-    modalImage.src = images[currentIndex];
-}
-
 // map 
 //
 

@@ -834,6 +834,16 @@ div.footer-container {
     transform: translateX(-50%); /* Move the container back by half of its width */
 }
 
+/* sections styling*/
+
+div.container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 /* gallery */
 
 div.line-divider {
