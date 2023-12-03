@@ -248,7 +248,7 @@ function updateNavigationButtons() {
     var nextButton = document.getElementById('nextButton');
 
     prevButton.disabled = currentIndex === 0;
-    nextButton.disabled = currentIndex === images.length - 1;
+    nextButton.disabled = currentIndex === images.length + 1;
 }
 
 // Attach click event listeners to each image

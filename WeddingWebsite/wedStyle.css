@@ -1379,10 +1379,15 @@ div.html {
 }
 
 /* Next and Previous buttons */
-button {
+
+div.gallery-btns {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    position: relative;
+}
+
+div.gallery-btns button {
     background-color: #3498db;
     color: #fff;
     border: none;
@@ -1390,16 +1395,18 @@ button {
     cursor: pointer;
 }
 
-button:disabled {
+div.gallery-btns button:disabled {
     background-color: #7f8c8d;
     cursor: not-allowed;
 }
 
 #prevButton {
+    position: absolute;
     left: 10px;
 }
 
 #nextButton {
+    position: absolute;
     right: 10px;
 }
 
