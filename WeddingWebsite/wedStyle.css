@@ -1295,7 +1295,7 @@ div.flower-footer {
   .navArrow-button.next {
     right: 1rem;
     border-top-left-radius: 10px;
-    border-bottom-left-radius: 1cap;
+    border-bottom-left-radius: 10px;
   }
   
   .slider:hover .navigation{
