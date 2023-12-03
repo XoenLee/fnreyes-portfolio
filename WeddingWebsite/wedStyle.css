@@ -1244,9 +1244,12 @@ div.flower-footer {
     background: #000116;
     width: 100%;
     height: 820px;
-    margin: 0 20px;
+    margin: 0 30px;
     overflow: hidden;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .slider .slide{

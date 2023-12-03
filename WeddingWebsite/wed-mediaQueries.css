@@ -39,7 +39,7 @@
     }
 }
 
-@media (max-width: 864px) {
+@media (max-width: 900px) {
 
     div.line-divider img {
         width: 30%;
@@ -89,7 +89,7 @@
     }
 
     .navbar-container {
-        width: 80%;
+        width: 100%;
     }
 
     .navbar-links a {
