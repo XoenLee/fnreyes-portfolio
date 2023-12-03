@@ -30,14 +30,12 @@ color palette
     -moz-osx-font-smoothing: grayscale; /* For Firefox on macOS */
 }
 
+
+
 body {
     color: #765830;
     background-color: #f6f6f6;
     font-family: "Lora", "Montserrat", "Poppins", sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -68,8 +66,6 @@ a {
 #event, #gallery {
     padding-top: 30px;
 }
-
-
 
 #gallery {
     background-color:#00141F;
@@ -105,10 +101,6 @@ div.flower-header {
     text-align: center;
     flex-direction: column;
     margin-bottom: 20px;
-    position: relative;
-}
-
-#heroSection {
     position: relative;
 }
 
@@ -221,39 +213,41 @@ div.flower-header {
     background-size: cover;
 }
 
-#heroSection .container {
+.container-1 {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     text-align: right;
     margin-right: 10%;
     width: 50%;
-    height: auto;
-    max-height: 70%;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.7) , rgba(255, 255, 255, 0) 50%)  
+    padding: 15px 15px 25px 0;
+    border-radius: 5px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.7) , rgba(255, 255, 255, 0) 50%); 
 }
 
-#heroSection-2 .container {
+.container-2 {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     text-align: right;
     margin-right: 10%;
     width: 50%;
-    height: auto;
-    max-height: 80%;
+    padding: 15px 15px 25px 0;
+    border-radius: 5px;
     background: linear-gradient(to left, rgba(0, 0, 0, 0.7) , rgba(255, 255, 255, 0) 60%);
 }
 
-#heroSection-3 .container {
+.container-3 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     text-align: left;
+    margin-left: 10%;
     width: 50%;
     height: auto;
-    max-height: 80%;
-    margin-left: 10%;
+    padding: 15px 0 25px 15px;
+    border-radius: 5px;
+    color: #fff;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 80%)
 }
 
@@ -320,62 +314,6 @@ div.quotes {
     background-color: #1c2263;
     transition: 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-
-/*carousel*/
-
-div.carousel-container {
-    position: relative;
-}
-
-div.carousel-container > ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.slide {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: 200ms ease-in-out;
-    transition-delay: 200ms;
-}
-
-.slide[data-active] {
-    opacity: 1;
-    z-index: 1;
-    transition-delay: 0ms;
-}
-
-.carousel-button {
-    position: absolute;
-    z-index: 2;
-    background: none;
-    border: none;
-    font-size: 4rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(255, 255, 255, 1);
-    cursor: pointer;
-    border-radius: .25rem;
-    padding: 0 .5rem;
-}
-
-.carousel-button:hover,
-.carousel-button:focus {
-    color: white;
-    background-color: rgba(0, 0, 0, .2);
-}
-
-.carousel-button.prev {
-    left: 1rem;
-}
-
-.carousel-button.next {
-    right: 1rem;
-}
-
-  /* end-of-carousel */
 
   /* about */
 
@@ -834,16 +772,6 @@ div.footer-container {
     transform: translateX(-50%); /* Move the container back by half of its width */
 }
 
-/* sections styling*/
-
-div.container {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
 /* gallery */
 
 div.line-divider {
@@ -1299,4 +1227,109 @@ div.flower-footer {
   
   .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
     background: var(--primary);
+  }
+
+/* slider 
+ */
+
+ #carousel{
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .slider {
+    position: relative;
+    background: #000116;
+    width: 100%;
+    height: 820px;
+    margin: 0 20px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .slider .slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 0 50%);
+    display: flex;
+    align-items: center;
+  }
+  
+  .slider .slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+  }
+  
+  .slider .slide img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .navArrow-button {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    font-size: 1em;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .navArrow-button.prev {
+    left: 1rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .navArrow-button.next {
+    right: 1rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 1cap;
+  }
+  
+  .slider:hover .navigation{
+    opacity: 1;
+  }
+  
+  .navigation-visibility {
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .navigation-visibility .slide-icon {
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.5);
+    width: 20px;
+    height: 10px;
+    margin: 0 6px;
+    border-radius: 2px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+  }
+  
+  .navigation-visibility .slide-icon.active {
+    background: #4285F4;
+  }
+
+  @media (max-width: 900px){
+    .slider{
+      width: 100%;
+    }
+
+    .navigation-visibility .slide-icon {
+        width: 12px;
+        height: 7px;
+    }
   }

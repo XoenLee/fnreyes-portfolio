@@ -7,50 +7,87 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-const buttons = document.querySelectorAll("[data-carousel-button]")
+// slider 
 
-buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        const offset = button.dataset.carouselButton === "next" ? 1 : -1
-        const slides = button
-            .closest("[data-carousel]")
-            .querySelector("[data-slides]")
+const slider = document.querySelector(".slider");
+    const nextBtn = document.querySelector(".next-btn");
+    const prevBtn = document.querySelector(".prev-btn");
+    const slides = document.querySelectorAll(".slide");
+    const slideIcons = document.querySelectorAll(".slide-icon");
+    const numberOfSlides = slides.length;
+    var slideNumber = 0;
 
-        const activeSlide = slides.querySelector("[data-active]")
-        let newIndex = [...slides.children].indexOf(activeSlide) + offset
-        if (newIndex < 0) newIndex = slides.children.length - 1
-        if (newIndex >= slides.children.length) newIndex = 0
+    //image slider next button
+    nextBtn.addEventListener("click", () => {
+        slides.forEach((slide) => {
+        slide.classList.remove("active");
+        });
+        slideIcons.forEach((slideIcon) => {
+            slideIcon.classList.remove("active");
+        });
 
-        slides.children[newIndex].dataset.active = true
-        delete activeSlide.dataset.active
+        slideNumber++;
 
-        slides.children[newIndex].dataset.active = true
-        delete activeSlide.dataset.active
-
-        // Reset the interval timer
-        clearInterval(intervalId);
-        autoPlay();
-    })
-})
-
-function autoPlay() {
-    const slidesContainer = document.querySelector("[data-carousel] [data-slides]")
-
-    intervalId = setInterval(() => {
-        const activeSlide = slidesContainer.querySelector("[data-active]")
-        const newIndex = [...slidesContainer.children].indexOf(activeSlide) + 1
-
-        if (newIndex < slidesContainer.children.length) {
-            slidesContainer.children[newIndex].dataset.active = true
-            delete activeSlide.dataset.active
-        } else {
-            slidesContainer.children[0].dataset.active = true
-            delete activeSlide.dataset.active
+        if(slideNumber > (numberOfSlides - 1)){
+        slideNumber = 0;
         }
-    }, 5000); // Change the interval as needed (currently set to 5000 milliseconds or 5 seconds)
-}
 
-autoPlay();
+        slides[slideNumber].classList.add("active");
+        slideIcons[slideNumber].classList.add("active");
+    });
+
+    //image slider previous button
+    prevBtn.addEventListener("click", () => {
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
+        slideIcons.forEach((slideIcon) => {
+            slideIcon.classList.remove("active");
+        });
+
+        slideNumber--;
+
+        if(slideNumber < 0){
+            slideNumber = numberOfSlides - 1;
+        }
+
+        slides[slideNumber].classList.add("active");
+        slideIcons[slideNumber].classList.add("active");
+    });
+
+    //image slider autoplay
+    var playSlider;
+
+    var repeater = () => {
+        playSlider = setInterval(function(){
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+            slideIcons.forEach((slideIcon) => {
+                slideIcon.classList.remove("active");
+            });
+
+        slideNumber++;
+
+        if(slideNumber > (numberOfSlides - 1)){
+            slideNumber = 0;
+        }
+
+            slides[slideNumber].classList.add("active");
+            slideIcons[slideNumber].classList.add("active");
+        }, 4000);
+    }
+    repeater();
+
+    //stop the image slider autoplay on mouseover
+    slider.addEventListener("mouseover", () => {
+        clearInterval(playSlider);
+    });
+
+    //start the image slider autoplay again on mouseout
+    slider.addEventListener("mouseout", () => {
+        repeater();
+    });
 
 // countdown
 //
@@ -168,3 +205,6 @@ var TrandingSlider = new Swiper('.tranding-slider', {
         prevEl: '.swiper-button-prev',
         }
 });
+
+
+
