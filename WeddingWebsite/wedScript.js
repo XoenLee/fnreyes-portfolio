@@ -206,5 +206,62 @@ var TrandingSlider = new Swiper('.tranding-slider', {
         }
 });
 
+var images = document.querySelectorAll('.tranding-slide-img img');
+var currentIndex = 0;
+
+// Function to open the modal and display the clicked image
+function openModal(imageSrc) {
+    var modal = document.getElementById('imageModal');
+    var modalImage = document.getElementById('modalImage');
+
+    modal.style.display = 'block';
+    modalImage.src = imageSrc;
+    currentIndex = Array.from(images).findIndex(img => img.src === imageSrc);
+    updateNavigationButtons();
+}
+
+// Function to close the modal
+function closeModal() {
+    var modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+}
+
+// Function to show the next image in the modal
+function showNextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    var nextImageSrc = images[currentIndex].src;
+    document.getElementById('modalImage').src = nextImageSrc;
+    updateNavigationButtons();
+}
+
+// Function to show the previous image in the modal
+function showPreviousImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    var previousImageSrc = images[currentIndex].src;
+    document.getElementById('modalImage').src = previousImageSrc;
+    updateNavigationButtons();
+}
+
+// Function to update the state of navigation buttons
+function updateNavigationButtons() {
+    var prevButton = document.getElementById('prevButton');
+    var nextButton = document.getElementById('nextButton');
+
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === images.length - 1;
+}
+
+// Attach click event listeners to each image
+images.forEach(function(image) {
+    image.addEventListener('click', function() {
+        openModal(this.src);
+    });
+});
+
+// Attach click event listeners to navigation buttons
+document.getElementById('prevButton').addEventListener('click', showPreviousImage);
+document.getElementById('nextButton').addEventListener('click', showNextImage);
+
+
 
 

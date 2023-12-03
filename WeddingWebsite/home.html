@@ -325,6 +325,13 @@
                 </div>
             </div>
         </div>
+        <!-- Modal -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <button id="prevButton" onclick="showPreviousImage()" disabled><i class="fas fa-chevron-left prev-btn"></i></button>
+            <button id="nextButton" onclick="showNextImage()" disabled><i class="fas fa-chevron-right next-btn"></i></button>
+        </div>
     </section>
 
     <!-- Reminders -->
