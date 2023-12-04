@@ -330,14 +330,17 @@ function validateSeatsConfirmed() {
 // Check if google is defined, then load data
 function checkAndLoadData() {
     if (typeof google !== 'undefined' && google.script) {
+        console.log("Google API loaded. Loading data from Google Sheets...");
         loadDataFromGoogle();
     } else {
+        console.error("Google API not loaded. Unable to load data.");
         setTimeout(checkAndLoadData, 100);
     }
 }
 
 // Start checking and loading data
 checkAndLoadData();
+
 
 
 
