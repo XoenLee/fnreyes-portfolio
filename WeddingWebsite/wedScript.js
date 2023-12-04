@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // slider 
 
     const slider = document.querySelector(".slider");
-    console.log(document.querySelector(".prev-btn"));
     const nextBtn = document.querySelector(".next-btn");
     
     const prevBtn = document.querySelector(".prev-btn");
