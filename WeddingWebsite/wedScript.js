@@ -263,5 +263,48 @@ document.getElementById('prevButton').addEventListener('click', showPreviousImag
 document.getElementById('nextButton').addEventListener('click', showNextImage);
 
 
+// Form Script 
+
+// Function to extract parameters from the URL
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+// Fetch data from Google Sheets and fill form fields
+google.script.run.withSuccessHandler(function(data) {
+    document.getElementById("name").value = data.name;
+    document.getElementById("invitedBy").value = data.invitedBy;
+    document.getElementById("seatsAllotted").value = data.seatsAllotted;
+}).getData();
+
+// Extract the unique token from the URL and fill the form fields
+var uniqueToken = getParameterByName("token");
+if (uniqueToken) {
+    // Fetch data associated with the unique token
+    google.script.run.withSuccessHandler(function(data) {
+        document.getElementById("name").value = data.name;
+        document.getElementById("invitedBy").value = data.invitedBy;
+        document.getElementById("seatsAllotted").value = data.seatsAllotted;
+    }).getDataByToken(uniqueToken);
+}
+
+// Validation function for seatsConfirmed
+function validateSeatsConfirmed() {
+    var seatsConfirmed = document.getElementById("seatsConfirmed").value;
+    var seatsAllotted = document.getElementById("seatsAllotted").value;
+
+    if (seatsConfirmed > seatsAllotted) {
+        alert("Seats confirmed cannot exceed seats allotted!");
+        document.getElementById("seatsConfirmed").value = seatsAllotted;
+    }
+}
+
+
 
 
