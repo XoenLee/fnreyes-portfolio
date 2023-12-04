@@ -284,20 +284,32 @@ function loadDataFromGoogle() {
     // Fetch data from Google Sheets and fill form fields
     if (!uniqueToken) {
         google.script.run.withSuccessHandler(function (data) {
-            console.log("Data received from server:", data);
-            document.getElementById("name").value = data.name;
-            document.getElementById("invitedBy").value = data.invitedBy;
-            document.getElementById("seatsAllotted").value = data.seatsAllotted;
+            if (data) {
+                console.log("Data received from server:", data);
+                document.getElementById("name").value = data.name;
+                document.getElementById("invitedBy").value = data.invitedBy;
+                document.getElementById("seatsAllotted").value = data.seatsAllotted;
+            } else {
+                console.error("Error fetching data from the server.");
+            }
+        }).withFailureHandler(function (error) {
+            console.error("Error fetching data from the server:", error);
         }).getData();
     }
 
     // If there's a unique token, fetch data associated with it
     if (uniqueToken) {
         google.script.run.withSuccessHandler(function (data) {
-            console.log("Data received from server:", data);
-            document.getElementById("name").value = data.name;
-            document.getElementById("invitedBy").value = data.invitedBy;
-            document.getElementById("seatsAllotted").value = data.seatsAllotted;
+            if (data) {
+                console.log("Data received from server:", data);
+                document.getElementById("name").value = data.name;
+                document.getElementById("invitedBy").value = data.invitedBy;
+                document.getElementById("seatsAllotted").value = data.seatsAllotted;
+            } else {
+                console.error("Error fetching data from the server.");
+            }
+        }).withFailureHandler(function (error) {
+            console.error("Error fetching data from the server:", error);
         }).getDataByToken(uniqueToken); // Pass uniqueToken directly
     }
 }
@@ -326,6 +338,7 @@ function checkAndLoadData() {
 
 // Start checking and loading data
 checkAndLoadData();
+
 
 
 
