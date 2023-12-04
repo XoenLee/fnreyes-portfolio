@@ -296,12 +296,15 @@ if (uniqueToken) {
 
 // Validation function for seatsConfirmed
 function validateSeatsConfirmed() {
-    var seatsConfirmed = document.getElementById("seatsConfirmed").value;
-    var seatsAllotted = document.getElementById("seatsAllotted").value;
+    var seatsConfirmed = parseInt(document.getElementById("seatsConfirmed").value, 10);
+    var seatsAllotted = parseInt(document.getElementById("seatsAllotted").value, 10);
 
-    if (seatsConfirmed > seatsAllotted) {
+    if (isNaN(seatsConfirmed)) {
+        alert("Please enter a valid number for confirmed seats.");
+        document.getElementById("seatsConfirmed").value = "";
+    } else if (seatsConfirmed > seatsAllotted) {
         alert("Seats confirmed cannot exceed seats allotted!");
-        document.getElementById("seatsConfirmed").value = seatsAllotted;
+        document.getElementById("seatsConfirmed").value = seatsAllotted.toString();
     }
 }
 
