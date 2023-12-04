@@ -276,25 +276,27 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-// Fetch data from Google Sheets and fill form fields
-google.script.run.withSuccessHandler(function(data) {
-    document.getElementById("name").value = data.name;
-    document.getElementById("invitedBy").value = data.invitedBy;
-    document.getElementById("seatsAllotted").value = data.seatsAllotted;
-}).getData();
-
-// Extract the unique token from the URL and fill the form fields
-var uniqueToken = getParameterByName("token");
-if (uniqueToken) {
-    // Fetch data associated with the unique token
+function loadDataFromGoogle() {
+    // Fetch data from Google Sheets and fill form fields
     google.script.run.withSuccessHandler(function(data) {
+        console.log("Data received from server:", data);
         document.getElementById("name").value = data.name;
         document.getElementById("invitedBy").value = data.invitedBy;
         document.getElementById("seatsAllotted").value = data.seatsAllotted;
-    }).getDataByToken(uniqueToken);
+    }).getData();
+
+    // Extract the unique token from the URL and fill the form fields
+    var uniqueToken = getParameterByName("token");
+    if (uniqueToken) {
+        // Fetch data associated with the unique token
+        google.script.run.withSuccessHandler(function(data) {
+            document.getElementById("name").value = data.name;
+            document.getElementById("invitedBy").value = data.invitedBy;
+            document.getElementById("seatsAllotted").value = data.seatsAllotted;
+        }).getDataByToken(uniqueToken);
+    }
 }
 
-// Validation function for seatsConfirmed
 function validateSeatsConfirmed() {
     var seatsConfirmed = parseInt(document.getElementById("seatsConfirmed").value, 10);
     var seatsAllotted = parseInt(document.getElementById("seatsAllotted").value, 10);
@@ -307,6 +309,19 @@ function validateSeatsConfirmed() {
         document.getElementById("seatsConfirmed").value = seatsAllotted.toString();
     }
 }
+
+// Check if google is defined, then load data
+function checkAndLoadData() {
+    if (typeof google !== 'undefined' && google.script) {
+        loadDataFromGoogle();
+    } else {
+        setTimeout(checkAndLoadData, 100);
+    }
+}
+
+// Start checking and loading data
+checkAndLoadData();
+
 
 
 
