@@ -277,25 +277,33 @@ function getParameterByName(name, url) {
 }
 
 function loadDataFromGoogle() {
+    // Extract the unique token from the URL
+    var uniqueToken = getParameterByName("token");
+    console.log("Unique Token from URL: " + uniqueToken);
+  
     // Fetch data from Google Sheets and fill form fields
-    google.script.run.withSuccessHandler(function(data) {
+    if (!uniqueToken) {
+        google.script.run.withSuccessHandler(function (data) {
         console.log("Data received from server:", data);
         document.getElementById("name").value = data.name;
         document.getElementById("invitedBy").value = data.invitedBy;
         document.getElementById("seatsAllotted").value = data.seatsAllotted;
-    }).getData();
-
-    // Extract the unique token from the URL and fill the form fields
-    var uniqueToken = getParameterByName("token");
+            }).getData();
+        }
+  
+    // If there's a unique token, fetch data associated with it
     if (uniqueToken) {
-        // Fetch data associated with the unique token
-        google.script.run.withSuccessHandler(function(data) {
+        google.script.run
+            .withSuccessHandler(function (data) {
+            console.log("Data received from server:", data);
             document.getElementById("name").value = data.name;
             document.getElementById("invitedBy").value = data.invitedBy;
             document.getElementById("seatsAllotted").value = data.seatsAllotted;
-        }).getDataByToken(uniqueToken);
+            })
+        .getDataByToken({ uniqueToken: uniqueToken }); // Pass uniqueToken as an object property
     }
 }
+  
 
 function validateSeatsConfirmed() {
     var seatsConfirmed = parseInt(document.getElementById("seatsConfirmed").value, 10);
@@ -321,6 +329,7 @@ function checkAndLoadData() {
 
 // Start checking and loading data
 checkAndLoadData();
+
 
 
 
