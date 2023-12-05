@@ -16,11 +16,19 @@
     div.flower-header {
         background-image: url("photos/flowerHead1440.png");
     }
+
+    div.flower-footer {
+        background-image: url("photos/flowerFooter1440.png")
+    }
 }
 
 @media (max-width: 1080px) {
     div.flower-header {
         background-image: url("photos/flowerHead1080.png");
+    }
+
+    div.flower-footer {
+        background-image: url("photos/flowerFooter1080.png");
     }
 
     .column1, .column2 {
@@ -48,6 +56,11 @@
     div.flower-header {
         background-image: url("photos/flowerHead864.png");
     }
+
+    div.flower-footer {
+        background-image: url("photos/flowerFooter900.png");
+    }
+
     .clock-container {
         padding: 20px 0;
     }

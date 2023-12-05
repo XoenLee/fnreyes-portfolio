@@ -68,18 +68,28 @@ document.getElementById('attendingOrNot').addEventListener('change', function(e)
 // Event listener for the form submission
 document.getElementById('seatForm').addEventListener('submit', function(e) {
   e.preventDefault();
+  var userId = window.location.search.split('=')[1];
   var name = document.getElementById('name').value;
   var invitedBy = document.getElementById('invitedBy').value;
   var seatsAlloted = document.getElementById('seatsAlloted').value;
   var confirmedSeats = document.getElementById('seatsConfirmed').value;
   var attending = document.getElementById('attendingOrNot').value;
 
+  if (!userId || !name || !invitedBy || !seatsAlloted || (attending === 'yes' && !confirmedSeats)) {
+    alert('Please make sure there is a valid user and fill in all the required fields.');
+    return;
+  }
+  // Set confirmedSeats to 0 if attending is 'no'
+  if (attending === 'no') {
+    confirmedSeats = 0;
+  }
+
   database.ref('/users/' + userId).update({
       name: name,
       invitedBy: invitedBy,
       seatsAlloted: seatsAlloted,
-      confirmedSeats: confirmedSeats,
-      attending: attending
+      seatsConfirmed: confirmedSeats,
+      attendingOrNot: attending
   });
 });
 

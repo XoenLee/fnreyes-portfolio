@@ -1006,9 +1006,10 @@ header.flowerFoot-container {
 div.flower-footer {
     width: 100%;
     height: 450px;
-    /* background-image: url("photos/flowerHead.png"); */
+    background-image: url("photos/flowerFooter1440.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center top;
     display: flex;
     justify-content: center;
     align-items: center;
