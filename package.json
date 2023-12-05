@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "firebase": "^10.7.0"
+    "csv-parser": "^3.0.0",
+    "firebase": "^10.7.0",
+    "firebase-admin": "^11.11.1"
   },
   "devDependencies": {
     "webpack": "^5.89.0",
