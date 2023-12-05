@@ -754,7 +754,7 @@ div.rsvp-container button:hover {
 .input-group {
     margin-bottom: 10px;
 }
-.input-group select {
+.input-group select, .input-group input {
     color: #765830;
     font-family: 'Lora';
 }
