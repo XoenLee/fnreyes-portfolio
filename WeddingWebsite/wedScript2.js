@@ -65,6 +65,28 @@ document.getElementById('attendingOrNot').addEventListener('change', function(e)
   }
 });
 
+// Function to display the confirmation message
+function displayConfirmationMessage(userId, attending) {
+  var confirmationMessage = document.getElementById('confirmationMessage');
+  
+  // Fetch the updated value from the database after a short delay
+  setTimeout(function () {
+    database.ref('/users/' + userId).once('value').then(function (snapshot) {
+      if (snapshot.exists()) {
+        var updatedConfirmedSeats = snapshot.val().seatsConfirmed;
+
+        if (attending === 'yes') {
+          confirmationMessage.innerHTML = `<p>Thank you for confirming your attendance!</p><p>We've reserved ${updatedConfirmedSeats} seats just for you!</p><p>Get ready for an unforgettable celebration – can't wait to see you there!</p>`;
+        } else {
+          confirmationMessage.innerHTML = `<p>We understand that you won't be able to make it this time.</p><p>Thank you for letting us know. We hope to see you soon!</p>`;
+        }
+      }
+    }).catch(function (error) {
+      console.error(error);
+    });
+  }, 1000); // Adjust the delay as needed
+}
+
 // Event listener for the form submission
 document.getElementById('seatForm').addEventListener('submit', function(e) {
   e.preventDefault();
@@ -80,7 +102,7 @@ document.getElementById('seatForm').addEventListener('submit', function(e) {
     return;
   }
   // Set confirmedSeats to 0 if attending is 'no'
-  if (attending === 'no' || 'No') {
+  if (attending === 'no') {
     confirmedSeats = 0;
   }
 
@@ -91,18 +113,13 @@ document.getElementById('seatForm').addEventListener('submit', function(e) {
       seatsConfirmed: confirmedSeats,
       attendingOrNot: attending
   });
-
-  // Display confirmation message dynamically in a div
-  var confirmationMessage = document.getElementById('confirmationMessage');
-
-  if (attendingOrNot === 'no' || 'No') {
-    confirmationMessage.innerHTML = `<p>We understand that you won't be able to make it this time.</p><p>Thank you for letting us know. Take care!</p>`;
-  } else {
-  confirmationMessage.innerHTML = `<p>Thank you for confirming your attendance!</p><p>We've reserved ${confirmedSeats} seats just for you!</p><p>Get ready for an unforgettable celebration – can't wait to see you there!</p>`;
-  }
-  // Optional: You can hide the form or take other actions after submission
+   // Optional: You can hide the form or take other actions after submission
   document.getElementById('seatForm').style.display = 'none';
+
+  // Call the function to display the confirmation message
+  displayConfirmationMessage(userId, attending);
 });
+
 
 
 
