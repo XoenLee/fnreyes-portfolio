@@ -80,7 +80,7 @@ document.getElementById('seatForm').addEventListener('submit', function(e) {
     return;
   }
   // Set confirmedSeats to 0 if attending is 'no'
-  if (attending === 'no') {
+  if (attending === 'no' || 'No') {
     confirmedSeats = 0;
   }
 
@@ -91,6 +91,17 @@ document.getElementById('seatForm').addEventListener('submit', function(e) {
       seatsConfirmed: confirmedSeats,
       attendingOrNot: attending
   });
+
+  // Display confirmation message dynamically in a div
+  var confirmationMessage = document.getElementById('confirmationMessage');
+
+  if (attendingOrNot === 'no' || 'No') {
+    confirmationMessage.innerHTML = `<p>We understand that you won't be able to make it this time.</p><p>Thank you for letting us know. Take care!</p>`;
+  } else {
+  confirmationMessage.innerHTML = `<p>Thank you for confirming your attendance!</p><p>We've reserved ${confirmedSeats} seats just for you!</p><p>Get ready for an unforgettable celebration – can't wait to see you there!</p>`;
+  }
+  // Optional: You can hide the form or take other actions after submission
+  document.getElementById('seatForm').style.display = 'none';
 });
 
 
