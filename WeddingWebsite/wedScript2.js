@@ -99,7 +99,7 @@ if (customIdentifier) {
       // Event listener for the form submission
       document.getElementById('seatForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        var userId = window.location.search.split('=')[1];
+        var userId = snapshot.val();
         var name = document.getElementById('name').value;
         var invitedBy = document.getElementById('invitedBy').value;
         var seatsAlloted = document.getElementById('seatsAlloted').value;
@@ -114,7 +114,6 @@ if (customIdentifier) {
         if (attending === 'no') {
           confirmedSeats = 0;
         }
-
         firebase.database().ref('/users/' + userId).update({
             name: name,
             invitedBy: invitedBy,
