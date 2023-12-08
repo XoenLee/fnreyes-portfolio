@@ -105,7 +105,7 @@ if (customIdentifier) {
                       // Create a temporary link and trigger a download
                       const downloadLink = document.createElement('a');
                       downloadLink.href = imageDataUrl;
-                      downloadLink.download = 'confirmation.png';
+                      downloadLink.download = 'fnmWeddingConfirmationPass.png';
                       downloadLink.click();
                     });
                 });
