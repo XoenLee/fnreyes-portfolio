@@ -85,7 +85,31 @@ if (customIdentifier) {
               var updatedConfirmedSeats = snapshot.val().seatsConfirmed;
 
               if (attending === 'yes') {
-                confirmationMessage.innerHTML = `<p>Thank you for confirming your attendance!</p><p>We've reserved ${updatedConfirmedSeats} seats just for you!</p><p>Get ready for an unforgettable celebration – can't wait to see you there!</p>`;
+                confirmationMessage.innerHTML = `<img src="photos/lineDivider1.png"></img> <p>Thank you for confirming your attendance!</p><p>We've reserved <strong style="font-weight:600;"> 
+                ${updatedConfirmedSeats} seats </strong>just for you!</p><p>Get ready for an unforgettable celebration – 
+                can't wait to see you there!</p><br><p>Kindly download using the button below; this will serve as your entry pass to the venue.
+                </p> <p style="padding-top: 20px; font-weight:600;">#FinalLIEgettingMarriedToDEK</p><button id="captureButton" class="styledButton" data-html2canvas-ignore="true">Download Pass</button>
+                `;
+              
+                document.getElementById('captureButton').addEventListener('click', function() {
+                  // Identify the element to capture
+                  const elementToCapture = document.getElementById('confirmationMessage');
+            
+                  // Use html2canvas to capture the content
+                  html2canvas(elementToCapture, {
+                    exclude:['.styledButton'],
+                  }).then(function(canvas) {
+                     // Convert the canvas to a data URL
+                      const imageDataUrl = canvas.toDataURL('image/png');
+              
+                      // Create a temporary link and trigger a download
+                      const downloadLink = document.createElement('a');
+                      downloadLink.href = imageDataUrl;
+                      downloadLink.download = 'confirmation.png';
+                      downloadLink.click();
+                    });
+                });
+              
               } else {
                 confirmationMessage.innerHTML = `<p>We understand that you won't be able to make it this time.</p><p>Thank you for letting us know. We hope to see you soon!</p>`;
               }
@@ -140,3 +164,5 @@ if (customIdentifier) {
   console.log('Custom identifier not found in the URL.');
   // Handle the case where the custom identifier is not found in the URL
 }
+
+   

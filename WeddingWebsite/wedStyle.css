@@ -1420,3 +1420,17 @@ div.gallery-btns button:disabled {
 #cont-seatsAlloted, #cont-invitedBy, #cont-seatsConfirmed {
     display: none;
 }
+
+#confirmationMessage {
+    padding: 20px;
+}
+
+button.styledButton {
+    width: 50% !important;
+    margin-top: 20px;
+}
+
+#confirmationMessage img {
+    width: 25%;
+    padding-bottom: 20px;
+}
