@@ -80,7 +80,7 @@ if (customIdentifier) {
         
         // Fetch the updated value from the database after a short delay
         setTimeout(function () {
-          database.ref('/users/' + userId).once('value').then(function (snapshot) {
+          firebase.database().ref('/users/' + userId).once('value').then(function (snapshot) {
             if (snapshot.exists()) {
               var updatedConfirmedSeats = snapshot.val().seatsConfirmed;
 
@@ -115,7 +115,7 @@ if (customIdentifier) {
           confirmedSeats = 0;
         }
 
-        database.ref('/users/' + userId).update({
+        firebase.database().ref('/users/' + userId).update({
             name: name,
             invitedBy: invitedBy,
             seatsAlloted: seatsAlloted,
