@@ -17,12 +17,29 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+
 hr {
     width: 20%;
     margin: 20px 0;
     color: #F08F13;
 }
 /* parallax & nav menu start */
+
+div.web-photo {
+    padding: 15px;
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+div.web-photo a img {
+    transition: transform 0.5s ease;
+    border-radius: 25px;
+}
+
+div.web-photo a:hover img {
+    transform: scale(0.95);
+}
 
 .logo {
     width: 30px;
@@ -455,6 +472,9 @@ div.client-nav-container ul a {
     }
     div.icon-links a {
         font-size: 1rem;
+    }
+    div.web-photo {
+        padding: 5px;
     }
     header nav {
         align-items: center;
